@@ -7,6 +7,12 @@
 pub mod client;
 pub mod endpoints;
 pub mod error;
+mod transport;
 
-pub use client::{HelixClient, HelixClientBuilder, HelixClientConfig};
+pub use client::{
+    HelixClient, HelixClientBuilder, HelixClientConfig, HelixRequestAuth, HelixResponse,
+};
+pub use endpoints::users::{
+    GetUsersRequest, GetUsersResponse, HelixBroadcasterType, HelixUser, HelixUserType,
+};
 pub use error::HelixError;
