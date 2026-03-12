@@ -1,0 +1,32 @@
+[package]
+name = "rustitch"
+description = "A unified, type-safe Twitch library facade for Rust."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[features]
+default = ["full"]
+full = ["auth", "helix", "eventsub", "eventsub-manage", "chat"]
+
+auth = ["dep:rustitch-auth"]
+helix = ["dep:rustitch-helix"]
+eventsub = ["dep:rustitch-eventsub"]
+eventsub-manage = ["eventsub", "dep:rustitch-helix", "rustitch-eventsub/eventsub-manage"]
+eventsub-webhook = ["eventsub", "rustitch-eventsub/eventsub-webhook"]
+chat = ["dep:rustitch-chat"]
+chat-irc = ["chat", "dep:rustitch-chat-irc", "rustitch-chat/chat-irc"]
+
+[dependencies]
+rustitch-auth = { workspace = true, optional = true }
+rustitch-chat = { workspace = true, optional = true }
+rustitch-chat-irc = { workspace = true, optional = true }
+rustitch-core = { workspace = true }
+rustitch-eventsub = { workspace = true, optional = true }
+rustitch-helix = { workspace = true, optional = true }
+
+[lints]
+workspace = true
