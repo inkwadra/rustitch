@@ -1,0 +1,23 @@
+[package]
+name = "rustitch-auth"
+description = "OAuth lifecycle, token orchestration, validation, and token storage contracts."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+oauth2.workspace = true
+reqwest.workspace = true
+rustitch-core.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true
+time.workspace = true
+tokio.workspace = true
+tracing.workspace = true
+
+[lints]
+workspace = true
