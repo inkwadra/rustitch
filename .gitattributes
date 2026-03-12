@@ -1,0 +1,31 @@
+# Normalize text files to LF by default across platforms.
+* text=auto eol=lf
+
+# Keep repository text assets normalized explicitly.
+*.rs text eol=lf
+*.toml text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.sh text eol=lf
+*.svg text eol=lf
+
+# Windows batch files should retain CRLF line endings.
+*.bat text eol=crlf
+
+# Treat common binary assets as binary to avoid line-ending normalization.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.pdf binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.otf binary
+
+# Treat Cargo.lock as binary to avoid line-ending normalization.
+Cargo.lock linguist-generated merge=binary
