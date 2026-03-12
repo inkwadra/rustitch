@@ -1,0 +1,26 @@
+[package]
+name = "rustitch-chat"
+description = "Transport-agnostic chat domain scaffolding and high-level client for rustitch."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[features]
+chat-irc = ["dep:rustitch-chat-irc"]
+
+[dependencies]
+rustitch-auth.workspace = true
+rustitch-chat-irc = { workspace = true, optional = true }
+rustitch-core.workspace = true
+rustitch-eventsub.workspace = true
+rustitch-helix.workspace = true
+thiserror.workspace = true
+tokio.workspace = true
+tokio-util.workspace = true
+tracing.workspace = true
+
+[lints]
+workspace = true
