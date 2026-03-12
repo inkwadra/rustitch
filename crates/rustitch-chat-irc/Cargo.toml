@@ -1,0 +1,19 @@
+[package]
+name = "rustitch-chat-irc"
+description = "Optional IRC transport adapter scaffolding for rustitch-chat."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+irc.workspace = true
+rustitch-auth.workspace = true
+rustitch-core.workspace = true
+thiserror.workspace = true
+tracing.workspace = true
+
+[lints]
+workspace = true
