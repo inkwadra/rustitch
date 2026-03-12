@@ -1,0 +1,18 @@
+[package]
+name = "rustitch-core"
+description = "Shared primitives, identifiers, configuration, and errors for rustitch."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+secrecy.workspace = true
+serde.workspace = true
+thiserror.workspace = true
+time.workspace = true
+
+[lints]
+workspace = true
