@@ -1317,6 +1317,7 @@ dependencies = [
 name = "rustitch-auth"
 version = "0.1.0"
 dependencies = [
+ "axum",
  "oauth2",
  "reqwest",
  "rustitch-core",
@@ -1325,6 +1326,7 @@ dependencies = [
  "thiserror 2.0.18",
  "time",
  "tokio",
+ "tokio-util 0.7.18",
  "tracing",
 ]
 

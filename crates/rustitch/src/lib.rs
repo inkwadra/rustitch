@@ -5,6 +5,7 @@
 //! should disable default features and opt into the required surfaces.
 
 pub use rustitch_core as core;
+pub use rustitch_core::ClientSecret;
 pub use rustitch_core::{
     AuthServiceConfig, BroadcasterId, ChannelId, ClientId, HelixConfig, MessageId, SessionId,
     SubscriptionId, TwitchConfig, UserId,
