@@ -3,7 +3,7 @@
 use thiserror::Error;
 
 /// Top-level error type for shared infrastructure and validation failures.
-#[derive(Debug, Error)]
+#[derive(Debug, Error, PartialEq, Eq)]
 pub enum CoreError {
     /// A required configuration value is missing or malformed.
     #[error("configuration error: {0}")]

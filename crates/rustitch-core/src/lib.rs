@@ -13,7 +13,7 @@ pub mod pagination;
 pub mod rate_limit;
 pub mod token;
 
-pub use config::TwitchConfig;
+pub use config::{AuthServiceConfig, HelixConfig, TwitchConfig};
 pub use error::CoreError;
 pub use id::{BroadcasterId, ChannelId, ClientId, MessageId, SessionId, SubscriptionId, UserId};
 pub use pagination::{Cursor, PageInfo, PageRequest};
