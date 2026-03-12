@@ -1,0 +1,13 @@
+# Stable rustfmt policy for the workspace.
+# Keep this file limited to stable, low-surprise settings that contributors and CI
+# can apply consistently on the stable toolchain.
+
+edition = "2024"
+style_edition = "2024"
+newline_style = "Unix"
+max_width = 100
+use_small_heuristics = "Max"
+reorder_imports = true
+reorder_modules = true
+use_field_init_shorthand = true
+use_try_shorthand = true

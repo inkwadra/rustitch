@@ -1,0 +1,11 @@
+# Conservative Clippy policy knobs for a published library workspace.
+# Lint severities live in Cargo.toml; this file only carries shared thresholds
+# and terminology that reduce false positives and review noise.
+
+msrv = "1.85"
+too-many-arguments-threshold = 7
+type-complexity-threshold = 250
+cognitive-complexity-threshold = 25
+enum-variant-name-threshold = 3
+single-char-binding-names-threshold = 4
+doc-valid-idents = ["Twitch", "EventSub", "WebSocket", "Webhook", "OAuth", "OAuth2", "Helix", "IRC", "Tokio", "Axum", "Clippy", "rustfmt"]
