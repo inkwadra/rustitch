@@ -1,0 +1,33 @@
+[package]
+name = "rustitch-eventsub"
+description = "EventSub runtime, replay protection, webhook verification, and optional management."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[features]
+eventsub-manage = ["dep:rustitch-helix"]
+eventsub-webhook = ["dep:axum", "dep:bytes", "dep:hmac", "dep:sha2"]
+
+[dependencies]
+axum = { workspace = true, optional = true }
+bytes = { workspace = true, optional = true }
+hmac = { workspace = true, optional = true }
+rustitch-auth.workspace = true
+rustitch-core.workspace = true
+rustitch-helix = { workspace = true, optional = true }
+serde.workspace = true
+serde_json.workspace = true
+sha2 = { workspace = true, optional = true }
+thiserror.workspace = true
+time.workspace = true
+tokio.workspace = true
+tokio-tungstenite.workspace = true
+tokio-util.workspace = true
+tracing.workspace = true
+
+[lints]
+workspace = true
