@@ -1392,12 +1392,15 @@ dependencies = [
 name = "rustitch-helix"
 version = "0.1.0"
 dependencies = [
+ "axum",
  "reqwest",
  "rustitch-auth",
  "rustitch-core",
  "serde",
  "serde_json",
  "thiserror 2.0.18",
+ "time",
+ "tokio",
  "tracing",
 ]
 
