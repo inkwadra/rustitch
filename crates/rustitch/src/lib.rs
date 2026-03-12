@@ -6,7 +6,8 @@
 
 pub use rustitch_core as core;
 pub use rustitch_core::{
-    BroadcasterId, ChannelId, ClientId, MessageId, SessionId, SubscriptionId, TwitchConfig, UserId,
+    AuthServiceConfig, BroadcasterId, ChannelId, ClientId, HelixConfig, MessageId, SessionId,
+    SubscriptionId, TwitchConfig, UserId,
 };
 
 #[cfg(feature = "auth")]
