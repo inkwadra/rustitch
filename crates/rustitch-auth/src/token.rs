@@ -81,8 +81,7 @@ pub trait TokenStore: Send + Sync {
     ) -> BoxFuture<'a, Result<Option<StoredToken>, AuthError>>;
 
     /// Stores a token under the provided key.
-    fn put<'a>(&'a self, key: TokenKey, token: StoredToken)
-    -> BoxFuture<'a, Result<(), AuthError>>;
+    fn put(&self, key: TokenKey, token: StoredToken) -> BoxFuture<'_, Result<(), AuthError>>;
 
     /// Removes a token from the store.
     fn remove<'a>(&'a self, key: &'a TokenKey) -> BoxFuture<'a, Result<(), AuthError>>;
